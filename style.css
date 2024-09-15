@@ -1,7 +1,19 @@
+#toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
 .gradiente {
     margin-bottom: 25px;
     margin-top: 8px;
     max-width: 500px;
+    color: white !important;
     font-size: 3rem; /* Tamanho do texto */
     font-weight: bold; /* Peso da fonte */
     background: linear-gradient(to right, #e11d48, #a16207); /* Gradiente de fundo */
