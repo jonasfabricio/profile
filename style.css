@@ -1,0 +1,40 @@
+.gradiente {
+    margin-bottom: 25px;
+    margin-top: 8px;
+    max-width: 500px;
+    font-size: 3rem; /* Tamanho do texto */
+    font-weight: bold; /* Peso da fonte */
+    background: linear-gradient(to right, #e11d48, #a16207); /* Gradiente de fundo */
+    -webkit-background-clip: text; /* Clipa o fundo ao texto */
+    -webkit-text-fill-color: transparent; /* Faz o texto transparente */
+    background-clip: text; /* Clipa o fundo ao texto */
+    -webkit-text-fill-color: transparent; /* Faz o texto transparente */
+}
+
+.container-sm {
+    max-width: 1048px;
+}
+
+.linhaVertical {
+    width: 0px;
+    height: 90px;
+    margin-right: 10px;
+    border: 1px solid white;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 10px;
+}
+
+#menu-mobile {
+    display: none;
+}
+
+@media (max-width: 767px){
+    .selfie{
+        display: none;
+    }
+}
