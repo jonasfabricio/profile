@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#404040] px-2">
-  <button id="toggle" onclick="toggle()"></button>
+  <button id="toggle" onclick="toggle()"><div id="darkmode"></div></button>
   <div class="container-sm m-auto">
     <div class="min-h-full">
-      <nav class="bg-[#262626] rounded-b-lg shadow-lg">
+      <nav class="bg-[#262626] rounded-b-lg shadow-lg sticky top-0">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="flex h-16 items-center justify-center">
             <div class="flex items-center">
@@ -21,9 +21,9 @@
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" id="sobreButtonDesktop">Sobre</a>
-                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" id="skillsButtonDesktop">Skills</a>
-                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" id="contatoButtonDesktop">Contato</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300" id="sobreButtonDesktop">Sobre</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300" id="skillsButtonDesktop">Skills</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300" id="contatoButtonDesktop">Contato</a>
                 </div>
               </div>
             </div>
@@ -61,10 +61,10 @@
               <div>
                 <h2 class="text-xl">Olá, eu sou Jonas Sousa</h2>
                 <h1 class="gradiente leading-none">Desenvolvedor<br>Full Stack</h1>
-                <button class="bg-gradient-to-r from-[#e11d48] to-[#a16207] rounded-full text-lg w-32 h-11 font-sans font-semibold mb-2">Contate me</button>
+                <button class="bg-gradient-to-r from-[#e11d48] to-[#a16207] rounded-full text-lg w-32 h-11 font-sans font-semibold mb-2" id="contateMe">Contate me</button>
                 <div class="flex mt-3 h-12 w-20">
                   <a href="https://github.com/jonasfabricio" class="mr-3" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADq0lEQVRoge2ZWUgVYRTHzXLNMjOyElrsoV1B08LqpQiMyjKiPX3ptQ16KqqHjF5C9KWShKyIknqKLI2ISoSisoIIW8g2WqQFs307/Q/fd2G4znTnzDf3DoQHfni545zz/8+d+e75zo2L643/MIgoCQwGOSALpAWtyTEgLh7MBDtBM3gK/lDPeAtaQTUoDdwUBGSDPeCFjVg30Q0Og6JYCx8C9oNvHoXbxXmQFwvxFeCdj8Kt8RNUgeRoCE8FR6IkPDzawFg/xWeAlhiJDwU/8NP9EJ8ObsVYfCi6QIGJ+ERwKSDxoXgDcrwaqA5YfCjugBSp+BKy/zIKKvZKxKeARy4Ts8nT4KVQ0GfQCB64/H9eYnPdGtgiENKqz+kLFoOH+v1uLe6Ghi/ID/AJ7AaD9HnLBLWa3IhPJtnVrA07n5u4PDZkkzsBpIe9N01Qi6MwkoFVwoSHIn+m/6w3W1ivPlLCJmHCZkMD+eCXoN5H0N8pWRqp+9Rt8IOVb2JA160U1ORY4JSoRJjoqKl4XZc3Pl8FdaucEm0XGij3w4Cu3Sqo2+KU5JjQQImPBiS1O52SXBEaKPPRgLRV79lakLzrXO+jAenql2WX5J4wSYOPBl4Ja4+0S3JdmOQL2V0JufhiYV2OTLtEFzwk4jFKvIF43nO0CWv+Bgl2yWo9GOBg49kexA/XF0AaHU4JNwmS3AWbSQ2xOL6Dk2A1yAWJNvl5MMCtwxpwglRn6iXOOhkoFCThfcAOUsOtjrBjvBj0uEdJjRjvexRtjW1OBrin/yA0wd3kFPBMv8dXtdSSsx9ZWmu8XueDAedpBQ7WCZPdBkn63IGW15PAGDCD1G0zEYzm4obin9C/Fg0cnOUh6UV9XiYYSmrjwvuKcaQ2LAWgCMwDkw0NVDqKt5i4ZliEha/Vf/m5ChlYRGYG+HtnmBsDCw0NjAflYBSpsXuhNrCE1ArlNWoiireYOGdQiH/UqCA1xeY9RrE2sAJM8JizE2RIDLCILg+FeLrMK88pUgMCnnDwyjMC1Otj0oWCY6Vr8RYTyz0U4q7yOWggdSvysvwaLAXHwWNSD70k6sTiLSZ2eTDhZ1wmk98LcHIfsC8g8TdJD8CMQpuI9SfBDeIAY/FhRspI1mp4CW5PasimGfTLBLcHjVES3w7mREW4jZH54KpPwnnV2kDRuuoRjHAPdBC8F4rm/cMZUkt1UsyF2xjhVnwq2AgOkPo+4LF6u/7LP1Xx6GQrmAtSg9bcG37FX9FNuyC/VXM0AAAAAElFTkSuQmCC" alt=""></a>
-                  <a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADB0lEQVRoge2ZT4hNURzHx8j8lxnUFFHGzoIaTBaspJkyo5RMY2NpxyyUIlmMomiascAYCUUJu6EhC2Yi8n9hkhARYZA/hRE/359zr273/c6757x3z73vab71aWrOub/z/b533znnnltSMq7/UERUDqaCBlAPatL2pBXMlYKlYAe4AJ6D35SpUXAV9IBVqYeCgZlgF3gpmDXRF3AMNCVtfDo4AL7naFzSRbAgCfPrwfsYjQf1E3SDChfGq8BxR8bDugPmxmm+DgwnZN4X/+CXxGF+CribsHlfn8DCfMyXgcspmff1BjTkGqAnZfO+7oNKW/MtJC9GQfGs8ZDU/epae23MV4LHEQVvgFle/wlgA0UHzkf8Yc03DbDZoGCjcN05hwFYgybmK8Arg2J1wrX73Pr/q8VRAdYZFuoIXccz1og73/90NCrAoGEhnqM7QSOpH/wlV45D+gyqdeZrwFhCRvJRqy5Ai0WR1+BJiB9e25jQ5v+ueKYaIrWb3QPOkvo2bdStC7DdokibcP0Dr+2R0NZMamqWZq9acMhi7GFdgBMOAywib93QCe1HDMd+qysw5CqAiUjter8ajp+5tSC7Xad1APy/GmwBfWCNps9Jw/HrpYtt5nHbW4i3G+Gptl3ot9Fw/NlSgJsOA8wTagwI/doNx58mBbBZjGwDrBBq3BP6tRqM/QtMkgL0OQzQLNQYyTHA0wzz3sWdRRLgvC5AU5EE2KYLMBF8LIIA+tMKNB4u8ADPQGm2AMsKPMBOrflAkWsFGuAbmGESoM0gwBmwO8Q7r+2D0HZKqDEq9DudZczeSPOBEAMGIZIUh81cfbME4Dcrtg8aLtUR7TozxNq0XXvqtzYfCNGVsvkrlM/7AlLb4P0pmb8NanM2HwqR9DfBO+PJeZsPBVlN5luNXMWnFr2gLFbzgRBzyN0ZKJ90L3diXAiyElyPyfgLUo+Sbj71iCC8d+ontfraiA/BeLHkR8jyxI0LQXgrzmc/m8BBUmest0jdFvyXX1XxW86tpB4vq9L2PK649Ackz1Pov8EuZQAAAABJRU5ErkJggg==" alt=""></a>
+                  <a href="https://www.linkedin.com/in/jonas-fabr%C3%ADcio-de-sousa-1517a3305/" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADB0lEQVRoge2ZT4hNURzHx8j8lxnUFFHGzoIaTBaspJkyo5RMY2NpxyyUIlmMomiascAYCUUJu6EhC2Yi8n9hkhARYZA/hRE/359zr273/c6757x3z73vab71aWrOub/z/b533znnnltSMq7/UERUDqaCBlAPatL2pBXMlYKlYAe4AJ6D35SpUXAV9IBVqYeCgZlgF3gpmDXRF3AMNCVtfDo4AL7naFzSRbAgCfPrwfsYjQf1E3SDChfGq8BxR8bDugPmxmm+DgwnZN4X/+CXxGF+CribsHlfn8DCfMyXgcspmff1BjTkGqAnZfO+7oNKW/MtJC9GQfGs8ZDU/epae23MV4LHEQVvgFle/wlgA0UHzkf8Yc03DbDZoGCjcN05hwFYgybmK8Arg2J1wrX73Pr/q8VRAdYZFuoIXccz1og73/90NCrAoGEhnqM7QSOpH/wlV45D+gyqdeZrwFhCRvJRqy5Ai0WR1+BJiB9e25jQ5v+ueKYaIrWb3QPOkvo2bdStC7DdokibcP0Dr+2R0NZMamqWZq9acMhi7GFdgBMOAywib93QCe1HDMd+qysw5CqAiUjter8ajp+5tSC7Xad1APy/GmwBfWCNps9Jw/HrpYtt5nHbW4i3G+Gptl3ot9Fw/NlSgJsOA8wTagwI/doNx58mBbBZjGwDrBBq3BP6tRqM/QtMkgL0OQzQLNQYyTHA0wzz3sWdRRLgvC5AU5EE2KYLMBF8LIIA+tMKNB4u8ADPQGm2AMsKPMBOrflAkWsFGuAbmGESoM0gwBmwO8Q7r+2D0HZKqDEq9DudZczeSPOBEAMGIZIUh81cfbME4Dcrtg8aLtUR7TozxNq0XXvqtzYfCNGVsvkrlM/7AlLb4P0pmb8NanM2HwqR9DfBO+PJeZsPBVlN5luNXMWnFr2gLFbzgRBzyN0ZKJ90L3diXAiyElyPyfgLUo+Sbj71iCC8d+ontfraiA/BeLHkR8jyxI0LQXgrzmc/m8BBUmest0jdFvyXX1XxW86tpB4vq9L2PK649Ackz1Pov8EuZQAAAABJRU5ErkJggg==" alt=""></a>
                 </div>
               </div>
               <div>
@@ -104,7 +104,42 @@
             </div>
         </section>
 
-        <!-- Era pra ter o Portfólio aqui, mas, nao tenho nada para colocar! -->
+        <section class="bg-[#262626] my-5 rounded-lg shadow-lg text-white px-4 py-6 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-center">Portfólio</h2>
+          <div>
+            <ul class="mt-10">
+              <li class="flex justify-between  mt-4">
+                <div>
+                  <img src="imagens/calc1.png" class="h96 w-96 ml-2 mt-1 rounded-lg">
+                </div>
+                <div class="w-1/2">
+                  <div>
+                    <h2 class="text-2xl font-bold">Calculator</h2>
+                    <p>Projeto destinado a aprimoração das minhas habilidades no Front end. Este projeto possibilita a conta, soma, exponensiação entre outras funcionalidades de uma calculadora normal. Projeto criado a bastante tempo atrás, no ínicio de meus estudos.</p>
+                  </div>
+                  <div>
+                    <a href="https://jonasfabricio.github.io/calculadora/" target="_blank"><button class="project h-12 w-24 bg-[#333333] shadow-lg rounded-lg mt-10 text-white font-semibold">Ver Projeto</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="flex justify-between  mt-4">
+                <div>
+                  <img src="imagens/card1.png" class="h96 w-96 ml-2 mt-1 rounded-lg">
+                </div>
+                <div class="w-1/2">
+                  <div>
+                    <h2 class="text-2xl font-bold">Cards</h2>
+                    <p>Projeto destinado a aprimoração das minhas habilidades no Front end. Este projeto envolve HTML, CSS e JS que possibilitam uma inplementação de dados a um 'cartao' em tempo real através de inputs e JavaScript. Projeto criado a algum tempo atrás</p>
+                  </div>
+                  <div>
+                    <a href="https://jonasfabricio.github.io/cards/"><button class="project h-12 w-24 bg-[#333333] shadow-lg rounded-lg mt-10 text-white font-semibold">Ver Projeto</button></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            </div>
+          </div>
+        </section>
 
         <section class="bg-[#262626] my-5 rounded-lg shadow-lg text-white px-4 py-6 sm:px-6 lg:px-8 text-center" id="contato">
           <h2 class="text-2xl font-bold">Contato</h2>
@@ -130,6 +165,6 @@
     </div>
   </div>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
