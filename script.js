@@ -1,7 +1,7 @@
 const mobileMenu = document.getElementById('menu-mobile');
 const sections = document.querySelectorAll('section');
 const allElements = document.querySelectorAll('*');
-const darkBall = document.getElementById('darkmode');
+const darkBall = document.getElementsByClassName('darkmode');
 let dark = true; 
 let show = false;
 
@@ -14,8 +14,10 @@ function toggle(){
         for(i=0;i<2;i++){
             document.getElementsByClassName('project')[i].style.backgroundColor='#cbb0b0'
         }
-        darkBall.style.backgroundColor='#ffffffff'
-        darkBall.style.left='18px'
+        for(i=0;i<2;i++){
+            darkBall[i].style.backgroundColor='#ffffffff'
+            darkBall[i].style.left='18px'
+        }
         sections.forEach(section => {
         section.style.backgroundColor='#baa5a4';
         })
@@ -31,8 +33,10 @@ function toggle(){
         for(i=0;i<2;i++){
             document.getElementsByClassName('project')[i].style.backgroundColor='#333333'
         }
-        darkBall.style.backgroundColor='#ffffff4f'
-        darkBall.style.left='0px'
+        for(i=0;i<2;i++){
+            darkBall[i].style.backgroundColor='rgba(160, 160, 160, 0.519)'
+            darkBall[i].style.left='0px'
+        }
         sections.forEach(section => {
         section.style.backgroundColor='#262626';
         })

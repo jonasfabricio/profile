@@ -2,25 +2,52 @@
     transition: all .3s ease;
 }
 
+#showMobileMenu {
+    background-color: #ffffff00;
+}
+
 #toggle {
-    position: absolute;
-    right: 20px;
-    top: 20px;
     width: 40px;
     height: 20px;
     background-color: rgb(51, 51, 51);
     box-shadow: 0px 0px 6px 0px rgb(255, 255, 255);
     border-radius: 20px;
+    margin-top: 22px;
+    box-sizing: border-box;
+    position: relative;
 }
 
-#darkmode {
+.darkmode {
     position: absolute;
+    top: 2.3px;
     width: 16px;
     height: 16px;
     border-radius: 20px;
     background-color: #ffffff4f;
     margin-left: 3px;
+}
+
+#darkmodeDesktop {
+    position: absolute; 
     top: 2.35px;
+}
+
+#darkmodeMobile {
+    width: 100px;
+    height: 35px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.219);
+}
+
+.mobile {
+    position: relative !important;
+    background-color: #ffffff4f;
+}
+
+
+.selfie {
+    width: 265px;
+    height: 265px;
 }
 
 .gradiente {
@@ -28,13 +55,13 @@
     margin-top: 8px;
     max-width: 500px;
     color: white !important;
-    font-size: 3rem; /* Tamanho do texto */
-    font-weight: bold; /* Peso da fonte */
-    background: linear-gradient(to right, #e11d48, #a16207); /* Gradiente de fundo */
-    -webkit-background-clip: text; /* Clipa o fundo ao texto */
-    -webkit-text-fill-color: transparent; /* Faz o texto transparente */
-    background-clip: text; /* Clipa o fundo ao texto */
-    -webkit-text-fill-color: transparent; /* Faz o texto transparente */
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #e11d48, #a16207);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container-sm {
@@ -63,6 +90,12 @@
     .selfie{
         display: none;
     }
+    #toggle{
+        display: none;
+    }
+    .gradiente {
+        font-size: 2.3rem;
+    }
 }
 
 @media(max-width: 880px){
@@ -72,6 +105,6 @@
     }
 
     .projects-content p {
-        min-width: 300px;
+        min-width: 230px;
     }
 }
